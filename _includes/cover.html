@@ -1,0 +1,10 @@
+{% if include.post.cover %}
+<img src="{{ include.post.cover | relative_url }}" alt=""{% if include.lazy %} loading="lazy"{% endif %}>
+{% else %}
+{% assign tone = include.post.date | date: '%-d' | modulo: 3 %}
+<div class="cover cover--{{ tone }}">
+  <span class="cover__category">{{ include.post.categories | first }}</span>
+  <span class="cover__title">{{ include.post.cover_title | default: include.post.title }}</span>
+  <span class="cover__brand">{{ site.title }}</span>
+</div>
+{% endif %}

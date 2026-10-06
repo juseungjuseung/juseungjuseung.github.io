@@ -1,0 +1,69 @@
+<svg class="vt-chart" viewBox="0 0 760 432" role="img" aria-labelledby="vt-chart-title" xmlns="http://www.w3.org/2000/svg">
+<title id="vt-chart-title">가상 스레드 적용 전후 핵심 지표 비교</title>
+<rect x="0" y="6" width="12" height="12" rx="3" class="c-before"/><text x="18" y="16" class="t-legend">가상 스레드 적용 전</text>
+<rect x="190" y="6" width="12" height="12" rx="3" class="c-after"/><text x="208" y="16" class="t-legend">가상 스레드 적용 후</text>
+<text x="0" y="52" class="t-title">채팅 처리량 최대 (건/초)</text>
+<text x="0" y="76" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 전</tspan></text>
+<path d="M64,62 H176.42857142857142 Q180.42857142857142,62 180.42857142857142,66 V78 Q180.42857142857142,82 176.42857142857142,82 H64 Z" class="c-before"><title>채팅 처리량 최대 가상 스레드 적용 전: 16.3</title></path>
+<text x="186.42857142857142" y="76" class="t-value">16.3</text>
+<text x="0" y="100" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 후</tspan></text>
+<path d="M64,86 H290.0 Q294.0,86 294.0,90 V102 Q294.0,106 290.0,106 H64 Z" class="c-after"><title>채팅 처리량 최대 가상 스레드 적용 후: 32.2</title></path>
+<text x="300.0" y="100" class="t-value">32.2</text>
+<line x1="64" y1="60" x2="64" y2="108" class="baseline"/>
+<text x="380" y="52" class="t-title">동시에 처리 중인 요청 최대 (개)</text>
+<text x="380" y="76" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 전</tspan></text>
+<path d="M444,62 H550.5980861244019 Q554.5980861244019,62 554.5980861244019,66 V78 Q554.5980861244019,82 550.5980861244019,82 H444 Z" class="c-before"><title>동시에 처리 중인 요청 최대 가상 스레드 적용 전: 201</title></path>
+<text x="560.5980861244019" y="76" class="t-value">201</text>
+<text x="380" y="100" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 후</tspan></text>
+<path d="M444,86 H670.0 Q674.0,86 674.0,90 V102 Q674.0,106 670.0,106 H444 Z" class="c-after"><title>동시에 처리 중인 요청 최대 가상 스레드 적용 후: 418</title></path>
+<text x="680.0" y="100" class="t-value">418</text>
+<line x1="444" y1="60" x2="444" y2="108" class="baseline"/>
+<text x="0" y="148" class="t-title">채팅 실패율</text>
+<text x="0" y="172" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 전</tspan></text>
+<path d="M64,158 H290.0 Q294.0,158 294.0,162 V174 Q294.0,178 290.0,178 H64 Z" class="c-before"><title>채팅 실패율 가상 스레드 적용 전: 18.40%</title></path>
+<text x="300.0" y="172" class="t-value">18.40%</text>
+<text x="0" y="196" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 후</tspan></text>
+<rect x="64" y="182" width="2" height="20" class="c-after"><title>채팅 실패율 가상 스레드 적용 후: 0%</title></rect>
+<text x="72" y="196" class="t-value">0%</text>
+<line x1="64" y1="156" x2="64" y2="204" class="baseline"/>
+<text x="380" y="148" class="t-title">대화 목록 조회 실패율</text>
+<text x="380" y="172" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 전</tspan></text>
+<path d="M444,158 H670.0 Q674.0,158 674.0,162 V174 Q674.0,178 670.0,178 H444 Z" class="c-before"><title>대화 목록 조회 실패율 가상 스레드 적용 전: 6.65%</title></path>
+<text x="680.0" y="172" class="t-value">6.65%</text>
+<text x="380" y="196" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 후</tspan></text>
+<rect x="444" y="182" width="2" height="20" class="c-after"><title>대화 목록 조회 실패율 가상 스레드 적용 후: 0%</title></rect>
+<text x="452" y="196" class="t-value">0%</text>
+<line x1="444" y1="156" x2="444" y2="204" class="baseline"/>
+<text x="0" y="244" class="t-title">채팅 응답 p95 (사용자 기준)</text>
+<text x="0" y="268" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 전</tspan></text>
+<path d="M64,254 H290.0 Q294.0,254 294.0,258 V270 Q294.0,274 290.0,274 H64 Z" class="c-before"><title>채팅 응답 p95 (사용자 기준) 가상 스레드 적용 전: 59.99초</title></path>
+<text x="300.0" y="268" class="t-value">59.99초</text>
+<text x="0" y="292" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 후</tspan></text>
+<path d="M64,278 H139.4015669278213 Q143.4015669278213,278 143.4015669278213,282 V294 Q143.4015669278213,298 139.4015669278213,298 H64 Z" class="c-after"><title>채팅 응답 p95 (사용자 기준) 가상 스레드 적용 후: 20.71초</title></path>
+<text x="149.4015669278213" y="292" class="t-value">20.71초</text>
+<line x1="64" y1="252" x2="64" y2="300" class="baseline"/>
+<text x="380" y="244" class="t-title">대화 목록 조회 응답 p95 (사용자 기준)</text>
+<text x="380" y="268" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 전</tspan></text>
+<path d="M444,254 H670.0 Q674.0,254 674.0,258 V270 Q674.0,274 670.0,274 H444 Z" class="c-before"><title>대화 목록 조회 응답 p95 (사용자 기준) 가상 스레드 적용 전: 59.94초</title></path>
+<text x="680.0" y="268" class="t-value">59.94초</text>
+<text x="380" y="292" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 후</tspan></text>
+<path d="M444,278 H444.04109609609606 Q444.08219219219217,278 444.08219219219217,278.0410960960961 V297.9589039039039 Q444.08219219219217,298 444.04109609609606,298 H444 Z" class="c-after"><title>대화 목록 조회 응답 p95 (사용자 기준) 가상 스레드 적용 후: 21.42ms</title></path>
+<text x="452" y="292" class="t-value">21.42ms</text>
+<line x1="444" y1="252" x2="444" y2="300" class="baseline"/>
+<text x="0" y="340" class="t-title">플랫폼(OS) 스레드 최대 (개)</text>
+<text x="0" y="364" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 전</tspan></text>
+<path d="M64,350 H290.0 Q294.0,350 294.0,354 V366 Q294.0,370 290.0,370 H64 Z" class="c-before"><title>플랫폼(OS) 스레드 최대 가상 스레드 적용 전: 225</title></path>
+<text x="300.0" y="364" class="t-value">225</text>
+<text x="0" y="388" class="t-label" style="font-size:11px"><tspan x="0" dy="-6">가상 스레드</tspan><tspan x="0" dy="13">적용 후</tspan></text>
+<path d="M64,374 H98.84444444444443 Q102.84444444444443,374 102.84444444444443,378 V390 Q102.84444444444443,394 98.84444444444443,394 H64 Z" class="c-after"><title>플랫폼(OS) 스레드 최대 가상 스레드 적용 후: 38</title></path>
+<text x="108.84444444444443" y="388" class="t-value">38</text>
+<line x1="64" y1="348" x2="64" y2="396" class="baseline"/>
+<text x="380" y="340" class="t-title">힙 사용량 최대</text>
+<text x="380" y="364" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 전</tspan></text>
+<path d="M444,350 H595.7671957671957 Q599.7671957671957,350 599.7671957671957,354 V366 Q599.7671957671957,370 595.7671957671957,370 H444 Z" class="c-before"><title>힙 사용량 최대 가상 스레드 적용 전: 256MiB</title></path>
+<text x="605.7671957671957" y="364" class="t-value">256MiB</text>
+<text x="380" y="388" class="t-label" style="font-size:11px"><tspan x="380" dy="-6">가상 스레드</tspan><tspan x="380" dy="13">적용 후</tspan></text>
+<path d="M444,374 H670.0 Q674.0,374 674.0,378 V390 Q674.0,394 670.0,394 H444 Z" class="c-after"><title>힙 사용량 최대 가상 스레드 적용 후: 378MiB</title></path>
+<text x="680.0" y="388" class="t-value">378MiB</text>
+<line x1="444" y1="348" x2="444" y2="396" class="baseline"/>
+</svg>

@@ -1,0 +1,29 @@
+<figure class="sim" id="thread-sim">
+  <p class="sim__notice"><strong>실측 요약값 기반 재생</strong> · 11분 → 20초</p>
+  <div class="sim__head">
+    <span class="sim__clock">시나리오 경과 <b data-sim="clock">0:00</b></span>
+    <button class="sim__play" type="button" data-sim="play">재생</button>
+    <button class="sim__play" type="button" data-sim="restart">다시 보기</button>
+  </div>
+  <div class="sim__panels">
+    <div class="sim__panel" data-mode="platform">
+      <p class="sim__title">가상 스레드 적용 전</p>
+      <div class="sim__row"><span>처리 중</span><div class="sim__track"><i class="sim__fill sim__fill--busy"></i></div><b data-v="busy">—</b></div>
+      <div class="sim__row"><span>대기 중</span><div class="sim__track"><i class="sim__fill sim__fill--wait"></i></div><b data-v="wait">0개</b></div>
+      <div class="sim__row sim__row--fail"><span>누적 실패</span><div class="sim__track"><i class="sim__fill sim__fill--fail"></i></div><b data-v="fail">0건</b></div>
+      <dl class="sim__stats"><div><dt>완료</dt><dd data-v="done">0</dd></div><div><dt>처리량 (건/초)</dt><dd data-v="tput">0</dd></div></dl>
+      <p class="sim__measured">실측 최대: 동시 요청 <strong>201개</strong> · 채팅 <strong>16.3건/초</strong><br>전체 채팅 실패율 <strong>18.40%</strong></p>
+    </div>
+    <div class="sim__panel" data-mode="virtual">
+      <p class="sim__title">가상 스레드 적용 후</p>
+      <div class="sim__row"><span>처리 중</span><div class="sim__track"><i class="sim__fill sim__fill--busy"></i></div><b data-v="busy">—</b></div>
+      <div class="sim__row"><span>대기 중</span><div class="sim__track"><i class="sim__fill sim__fill--wait"></i></div><b data-v="wait">0개</b></div>
+      <div class="sim__row sim__row--fail"><span>누적 실패</span><div class="sim__track"><i class="sim__fill sim__fill--fail"></i></div><b data-v="fail">0건</b></div>
+      <dl class="sim__stats"><div><dt>완료</dt><dd data-v="done">0</dd></div><div><dt>처리량 (건/초)</dt><dd data-v="tput">0</dd></div></dl>
+      <p class="sim__measured">실측 최대: 동시 요청 <strong>418개</strong> · 채팅 <strong>32.2건/초</strong><br>전체 채팅 실패율 <strong>0%</strong></p>
+    </div>
+  </div>
+  <label class="sim__seek-label">재생 구간 <input data-sim="seek" type="range" min="0" max="660" step="1" value="0" aria-label="시나리오 경과 시간" /></label>
+  <figcaption>실측 요약값을 참고한 시뮬레이션이다. 대기·실패 등 시간별 변화는 모델 계산값이며, 실패는 요청 후 60초 내 응답을 받지 못한 경우다. 패널 하단은 실제 측정 결과다.</figcaption>
+</figure>
+<script src="{{ '/assets/js/thread-sim.js' | relative_url }}" defer></script>

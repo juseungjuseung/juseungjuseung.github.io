@@ -1,0 +1,40 @@
+title: juseung tech
+description: Java와 Spring 기반의 백엔드 개발 경험을 공유합니다.
+author: 박주승
+url: https://juseungjuseung.github.io
+baseurl: ""
+lang: ko
+github: juseungjuseung
+
+timezone: Asia/Seoul
+permalink: /posts/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+profile:
+  role: Backend Developer
+  bio: Java와 Spring으로 백엔드를 개발합니다. 개발 과정에서 배운 내용을 이곳에 기록합니다.
+  avatar: https://github.com/juseungjuseung.png

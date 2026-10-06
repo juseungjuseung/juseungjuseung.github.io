@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="container article-layout">
+  <article class="article">
+    <a class="back-link" href="{{ '/' | relative_url }}">← 모든 글</a>
+    <header class="article__head">
+      <p class="article__category">{{ page.categories | first }}</p>
+      <h1 class="article__title">{{ page.title }}</h1>
+      {% if page.description %}<p class="article__description">{{ page.description }}</p>{% endif %}
+      <div class="author">
+        <img class="author__avatar" src="{{ site.profile.avatar }}" alt="" width="44" height="44">
+        <div>
+          <p class="author__name">{{ site.author }}</p>
+          <p class="author__sub">
+            <span>{{ site.profile.role }}</span>
+            <span>{{ page.date | date: '%Y년 %-m월 %-d일' }}</span>
+            {% assign chars = content | strip_html | size %}
+            <span>{{ chars | divided_by: 600 | plus: 1 }}분 소요</span>
+          </p>
+        </div>
+        <button class="share" type="button" aria-label="링크 복사" data-url="{{ page.url | absolute_url }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="prose" id="prose">
+      {{ content }}
+    </div>
+
+    {% if page.tags.size > 0 %}
+    <ul class="tags">
+      {% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.previous or page.next %}
+    <nav class="pager" aria-label="이전 및 다음 글">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}"><span>이전 글</span>{{ page.previous.title }}</a>
+      {% else %}<span></span>{% endif %}
+      {% if page.next %}
+      <a class="pager__next" href="{{ page.next.url | relative_url }}"><span>다음 글</span>{{ page.next.title }}</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </article>
+
+  <aside class="toc">
+    <p class="toc__title">목차</p>
+    <ol id="toc"></ol>
+  </aside>
+</div>
+{% if page.mermaid %}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  document.querySelectorAll('pre > code.language-mermaid').forEach((code) => {
+    const box = document.createElement('div');
+    box.className = 'mermaid';
+    box.textContent = code.textContent;
+    code.closest('div.highlighter-rouge, pre').replaceWith(box);
+  });
+  const dark = document.documentElement.dataset.theme === 'dark';
+  mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'neutral', fontFamily: 'Pretendard Variable, sans-serif' });
+  mermaid.run();
+</script>
+{% endif %}

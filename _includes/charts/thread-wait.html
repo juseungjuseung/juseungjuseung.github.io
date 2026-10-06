@@ -1,0 +1,18 @@
+<figure class="tw">
+  <div class="tw__math">
+    <p>동시에 처리 중인 요청 = 초당 요청 수 × 요청 하나의 처리 시간</p>
+    <p><b>195건</b> = 15건/초 × 13초</p>
+  </div>
+  <div class="tw__timeline">
+    <p class="tw__label">채팅 요청 하나가 스레드를 쓰는 시간</p>
+    <div class="tw__bar">
+      <span class="tw__seg tw__seg--work" style="flex: 0 0 4%"></span>
+      <span class="tw__seg tw__seg--wait" style="flex: 1 1 auto">AI 응답 대기 약 13초</span>
+      <span class="tw__seg tw__seg--work" style="flex: 0 0 4%"></span>
+    </div>
+    <div class="tw__legend">
+      <span><i class="tw__dot tw__dot--work"></i>요청 처리, DB 저장 (수십 ms)</span>
+      <span><i class="tw__dot tw__dot--wait"></i>스레드가 아무 일도 하지 않고 기다리는 시간</span>
+    </div>
+  </div>
+</figure>
